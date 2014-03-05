@@ -1,0 +1,27 @@
+### INSTRUCTIONS
+
+1.  Run setup.sh ("bash setup.sh")
+    It should install the necessary Debian/Ubuntu packages and the additional Python modules.
+    (Tested on Ubuntu 13.10 64-bit.)
+
+2.  Run the script ("python3 script.py [opt]") 
+    $ python script.py -h
+    Usage:
+       script.py -i sector_index_start[:sector_index_end] [-c concurrent_processes_num] [-p http_proxy:port]
+    Note:
+       The sector index ranges from 0 to 306.
+    Example:
+       Extracting company profiles from the sector with index 0:
+          script.py -i 0
+       Extracting company profiles from the sector with index 20 until 22:
+          script.py -i 20:22
+       Extracting company profiles from the sector with index 7 until 10 using 2 concurrent processes:
+          script.py -i 7:10 -c 2
+
+3.  The output should be generated in the folder 'out'.
+
+
+### NOTE
+
+For test run, please try this:
+    python3 script.py -i 16
